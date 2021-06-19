@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
-
 import Blog from './components/blog'
 import blogService from './services/blogs'
-
 import LoginForm from './components/LoginForm'
 import loginService from './services/login'
-
 import Togglable from './components/Togglable'
 import Notification from './components/Notification'
 
@@ -86,7 +83,7 @@ const App = () => {
         loginForm() :
         <div>
           <p>{user.name} logged in</p>
-          {Blog()}
+           {Blog()}
         </div>
       }
 
