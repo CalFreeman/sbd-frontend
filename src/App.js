@@ -6,6 +6,9 @@ import loginService from './services/login'
 import Togglable from './components/Togglable'
 import Notification from './components/Notification'
 
+import Container from '@material-ui/core/Container'
+
+
 const App = () => {
   const [blogs, setBlogs] = useState([])
   
@@ -71,26 +74,28 @@ const App = () => {
       />
     </Togglable>
   )
-  //END loginFX(s)
+  //END loginFx(s)
 
   return (
-    <div>
-      <h2>blogs</h2>
+    <Container maxWidth="sm" style={{ marginTop: '2rem' }}>
+      <div>
+        <h2>blogs</h2>
 
-      <Notification message={errorMessage} />
+        <Notification message={errorMessage} />
 
-      {user === null ?
-        loginForm() :
-        <div>
-          <p>{user.name} logged in</p>
-           {Blog()}
-        </div>
-      }
+        {user === null ?
+          loginForm() :
+          <div>
+            <p>{user.name} logged in</p>
+            {Blog()}
+          </div>
+        }
 
-      {blogs.map(blog =>
-        <Blog key={blog.id} blog={blog} />
-      )}
-    </div>
+        {blogs.map(blog =>
+          <Blog key={blog.id} blog={blog} />
+        )}
+      </div>
+    </Container>
   )
 }
 
