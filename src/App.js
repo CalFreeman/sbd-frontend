@@ -88,7 +88,6 @@ const App = () => {
           loginForm() :
           <div>
             <p>{user.name} logged in</p>
-            {Blog()}
           </div>
         }
 

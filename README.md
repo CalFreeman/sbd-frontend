@@ -5,7 +5,6 @@
     https://www.npmjs.com/package/redux-devtools-extension
     $npm install --save-dev redux-devtools-extension
 
-
 ###
 #TODO
 Look -> app.js "Blog"
@@ -21,7 +20,7 @@ $npm outdated --depth 0
 npm audit
 
 ###
-#Notes
+#NOTES
 npm install @material-ui/core
 #add the following head tag in public/index.html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
